@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+    <TextView
+        android:id="@+id/bestpower_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="最佳功率点电压设置"
+        android:textSize="24sp" />
+
+    
+    <EditText
+        android:id="@+id/lightnum_bestpower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bestpower_title"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:hint="请输入路灯编号"
+        android:digits="0123456789"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="3"
+        android:ems="10" />
+ 
+<SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:max="40"
+        android:layout_below="@+id/lightnum_bestpower"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:minHeight="8dp" 
+        android:maxHeight="8dp"
+        android:progress="20" />
+    
+    <Button
+        android:id="@+id/bestpower_confirm"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:text="确定设置"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/bestpower_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bestpower_confirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="" />
+
+
+
+    <TextView
+        android:id="@+id/seekbar_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_centerHorizontal="true"
+        android:text="20V" />
+
+</RelativeLayout>

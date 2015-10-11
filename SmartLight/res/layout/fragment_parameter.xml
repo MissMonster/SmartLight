@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+ <FrameLayout 
+        android:id="@+id/title"
+        android:background="#56abe4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout
+    	android:layout_height="40dp"
+    	android:layout_width="match_parent">
+    	
+            <ImageView
+		        android:id="@+id/canshushezhi"
+		        android:layout_width="60dp"
+		        android:layout_height="25dp"
+		        android:layout_alignParentLeft="true"
+		        android:padding="2dp"
+		        android:scaleType="fitCenter"
+		        android:layout_centerVertical="true"
+		        android:src="@drawable/canshushezhi" />
+        
+	    	<TextView 
+	    	    android:id="@+id/titleTv"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="首页"
+		        android:textSize="19dp"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true"
+		        android:textColor="#FFFFFF"/>
+        
+    	</RelativeLayout>
+        
+    </FrameLayout>
+    
+    
+
+    <android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title" >
+
+        <FrameLayout
+		android:id="@+id/content_frame"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white" >
+		</FrameLayout>
+        
+        
+        <RelativeLayout
+            android:id="@+id/menu_layout_left"   
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@android:color/white" >
+            
+            <ListView
+                android:id="@+id/menu_listView_l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+            
+            <TextView 
+                android:id="@+id/permission_low"
+                android:layout_width="170dp"
+		        android:layout_height="50dp"
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginBottom="10dp"
+		        android:text="您是普通用户，只具有查询参数的权限"
+		        />
+            
+            <ImageView
+		        android:id="@+id/hongruipng"
+		        android:layout_width="170dp"
+		        android:layout_height="50dp"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="40dp"
+		        android:layout_below="@+id/menu_listView_l"
+		        android:layout_marginBottom="10dp"
+		        android:layout_alignParentBottom="true"
+		        android:scaleType="centerInside"
+		        android:src="@drawable/csu" />
+        </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
+    
+
+
+</RelativeLayout>

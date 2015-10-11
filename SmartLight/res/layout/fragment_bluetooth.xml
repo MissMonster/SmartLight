@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <FrameLayout 
+        android:id="@+id/title"
+        android:background="#56abe4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout
+    	android:layout_height="40dp"
+    	android:layout_width="match_parent">
+        
+	    	<TextView 
+	    	    android:id="@+id/titleTv"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="首页"
+		        android:textSize="19dp"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true"
+		        android:textColor="#FFFFFF"/>
+        
+    	</RelativeLayout>
+        
+    </FrameLayout>
+    
+    
+    <TextView
+        android:id="@+id/lanyakaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp"
+        android:text="蓝牙开关" />
+    
+
+     <com.zhangyan.SmartLight.SwitchButton  
+        android:id="@+id/BluetoothSwitchButton"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="48dp" />  
+        
+     
+     
+     <TextView
+        android:id="@+id/sousuoshebein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:layout_below="@+id/lanyakaiguan"
+        android:layout_marginTop="34dp"
+        android:textSize="18sp"
+        android:text="搜索设备" />
+     
+     
+     
+      <com.zhangyan.SmartLight.SwitchButton  
+        android:id="@+id/ScanDeviceSwitchButton"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="45dp"
+        android:layout_below="@+id/lanyakaiguan"
+        android:layout_marginTop="30dp"/>  
+    
+    <ListView
+        android:id="@+id/listDeviceView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/BluetoothSwitchButton"
+        android:layout_marginTop="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+    
+      <ProgressBar
+        android:id="@+id/scanprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="280dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+       />
+    
+      <View 
+          android:layout_height="1dp" 
+          android:background="#D8D8D8"
+          android:layout_width="fill_parent"
+          android:layout_below="@+id/availabledevice"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginTop="15dp">
+          
+      </View>
+      
+      
+      
+
+    <TextView
+        android:id="@+id/availabledevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BluetoothSwitchButton"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="70dp"
+        android:text="可用设备" />
+    
+        
+    <TextView
+        android:id="@+id/currentstate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:text="TextView" />
+
+</RelativeLayout>

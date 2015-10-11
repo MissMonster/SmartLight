@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >  
+    <!-- 上边主页面 -->
+
+    
+    <fragment
+        android:id="@+id/fragement_bluetooth"
+        android:name="com.zhangyan.SmartLight.FragmentBluetooth"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        tools:layout="@android:layout/list_content" />
+  
+    <fragment
+        android:id="@+id/fragement_parameter"
+        android:name="com.zhangyan.SmartLight.FragmentParameter"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        tools:layout="@android:layout/list_content" />
+
+    <fragment
+        android:id="@+id/fragement_more"
+        android:name="com.zhangyan.SmartLight.FragmentMore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10"
+        tools:layout="@android:layout/list_content" />
+   
+    <View 
+          android:layout_height="0.5dp" 
+          android:background="#D8D8D8" 
+          android:layout_width="fill_parent">
+          
+      </View>
+    
+    
+    <!-- 底部菜单页面 -->  
+    <RadioGroup  
+        android:id="@+id/bottomRg"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:layout_weight="0.5" 
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >  
+        <RadioButton  
+            android:id="@+id/rbOne"  
+            android:checked="true"
+            style="@style/CustomRadioBtn"
+            android:textSize="13sp"
+            android:text="连接" />  
+  
+        <RadioButton  
+            android:id="@+id/rbTwo"  
+            style="@style/CustomRadioBtn"
+            android:textSize="13sp"
+            android:text="路灯参数" />  
+  
+        <RadioButton  
+            android:id="@+id/rbThree"
+            style="@style/CustomRadioBtn"
+            android:textSize="13sp"
+            android:text="更多" />  
+    </RadioGroup>  
+</LinearLayout>  

@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+    <TextView
+        android:id="@+id/strongtime_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="强亮时间设置"
+        android:textSize="24sp" />
+
+    <RadioGroup
+        android:id="@+id/singorall_strongtime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/strongtime_title"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/single_strongtime"
+            style="@style/CustomRadioButton"
+            android:checked="true"
+            android:background="#FF3030"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:text="单个路灯" />
+
+        <RadioButton
+            android:id="@+id/all_strongtime"
+            style="@style/CustomRadioButton"
+            android:text="所有路灯"
+            android:textColor="#000000"
+            android:background="@drawable/radio"
+            android:textSize="17sp" />
+
+    </RadioGroup>
+    
+    
+    
+    <EditText
+        android:id="@+id/lightnum_strongtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singorall_strongtime"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:hint="请输入路灯编号"
+        android:digits="0123456789"
+        android:gravity="center"
+        android:ems="10" />
+
+    
+    <Button
+        android:id="@+id/strongtime_confirm"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#FF3030"
+        android:text="确定设置"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/strongtime_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/strongtime_confirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:max="12"
+        android:layout_below="@+id/lightnum_strongtime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:minHeight="8dp" 
+        android:maxHeight="8dp"
+        android:progress="6" />
+
+    <TextView
+        android:id="@+id/seekbar_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_centerHorizontal="true"
+        android:text="6小时" />
+
+</RelativeLayout>

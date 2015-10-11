@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/switchvoltage_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="开关阈值电压修改"
+        android:textSize="24sp" />
+
+    <RadioGroup
+        android:id="@+id/singorall_switchvoltage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/switchvoltage_title"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/single_switchvoltage"
+            style="@style/CustomRadioButton"
+            android:background="#FF3030"
+            android:checked="true"
+            android:text="单个路灯"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/all_switchvoltage"
+            style="@style/CustomRadioButton"
+            android:background="@drawable/radio"
+            android:text="所有路灯"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/dayornight_switchvoltage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/singorall_switchvoltage"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/day_switchvoltage"
+            style="@style/CustomRadioButton"
+            android:background="#FF3030"
+            android:checked="true"
+            android:text="白天"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <RadioButton
+            android:id="@+id/night_switchvoltage"
+            style="@style/CustomRadioButton"
+            android:background="@drawable/radio"
+            android:text="夜晚"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/lightnum_switchvoltage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dayornight_switchvoltage"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:hint="请输入路灯编号"
+        android:gravity="center"
+        android:ems="8" >
+
+        <requestFocus />
+    </EditText>
+    
+    
+    
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:max="40"
+        android:layout_below="@+id/lightnum_switchvoltage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:minHeight="8dp" 
+        android:maxHeight="8dp"
+        android:progress="20" />
+    
+    
+    <Button
+        android:id="@+id/switchvoltage_confirm"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bluebutton"
+        android:text="确定设置"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switchvoltage_confirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/switchvoltage_seebar_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_centerHorizontal="true"
+        android:text="20V" />
+
+</RelativeLayout>
